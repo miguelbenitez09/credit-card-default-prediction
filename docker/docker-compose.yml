@@ -1,0 +1,46 @@
+services:
+  credit-default-api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: credit_card_api
+    ports:
+      - "8002:8000"
+    volumes:
+      # Montar los modelos para desarrollo (opcional)
+      - ../models:/app/models:ro
+    environment:
+      - PYTHONPATH=/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    networks:
+      - credit-network
+
+  credit-default-web:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: credit_card_web
+    ports:
+      - "8502:8501"
+    volumes:
+      # Montar los modelos para desarrollo (opcional)
+      - ../models:/app/models:ro
+    environment:
+      - PYTHONPATH=/app
+    restart: unless-stopped
+    depends_on:
+      credit-default-api:
+        condition: service_healthy
+    command: ["streamlit", "run", "web/app.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
+    networks:
+      - credit-network
+
+networks:
+  credit-network:
+    driver: bridge
