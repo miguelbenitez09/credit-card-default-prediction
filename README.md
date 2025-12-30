@@ -695,6 +695,25 @@ cd web
 pip install -r requirements.txt
 ```
 
+#### 4. Descargar Datos desde Kaggle
+
+**⚠️ Los archivos CSV NO están incluidos en el repositorio debido a su tamaño.**
+
+**Opción A: Descargar manualmente**
+1. Ir a: https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset
+2. Descargar el archivo: `default_of_credit_card_clients.csv`
+3. Colocar en: `data/01_raw/default_of_credit_card_clients.csv`
+
+**Opción B: Usar Kaggle API**
+```bash
+# Instalar Kaggle CLI
+pip install kaggle
+
+# Descargar dataset
+kaggle datasets download -d uciml/default-of-credit-card-clients-dataset -p data/01_raw/
+unzip data/01_raw/default-of-credit-card-clients-dataset.zip -d data/01_raw/
+```
+
 ---
 
 ### Opción 2: Deployment con Docker (Recomendado) 🐳

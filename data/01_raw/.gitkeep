@@ -1,0 +1,5 @@
+# Raw data files go here
+# Download from Kaggle: https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset
+
+Required files:
+- default_of_credit_card_clients.csv

@@ -1,0 +1,10 @@
+# Processed data files will be generated here after running preprocessing notebook
+
+Generated files:
+- processed_credit_card_data.csv
+- X_train.npy
+- X_train_balanced.npy
+- X_test.npy
+- y_train.npy
+- y_train_balanced.npy
+- y_test.npy
