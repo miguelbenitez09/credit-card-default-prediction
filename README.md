@@ -6,14 +6,18 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-green.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28.1-red.svg)
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)
+[![Autor](https://img.shields.io/badge/Autor-developed_by_Miguel_Benítez_(UTP)-informational.svg)](https://github.com/miguelbenitez09)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+> **Firma Oficial:** **`Credit Card Default Prediction v1.0.0 • developed by Miguel Benítez`**  
 > **Sistema de Machine Learning para predicción de riesgo de default en tarjetas de crédito mediante análisis de historial crediticio y factores demográficos.**
 
 ---
 
 ## 👨‍💻 Autor
 
-**Miguel Antonio Benítez González**
+**Ing. Miguel Antonio Benítez González** (Universidad Tecnológica de Panamá - UTP)
+- 🎓 Título: Ingeniero en Sistemas y Computación
 - 📧 Email: mbenitezg01@gmail.com
 - 💻 GitHub: [miguelbenitez09](https://github.com/miguelbenitez09?tab=repositories)
 - 💼 LinkedIn: [Miguel Antonio Benítez González](https://www.linkedin.com/in/miguel-antonio-ben%C3%ADtez-gonz%C3%A1lez-457816247/)
@@ -933,6 +937,6 @@ MIT License. Dataset UCI bajo CC BY 4.0.
 
 ---
 
-**Desarrollado con ❤️ por Miguel Antonio Benítez González**
-
-*Última actualización: Diciembre 2025*
+**Firma Oficial del Proyecto:**  
+`Credit Card Default Prediction v1.0.0 • developed by Miguel Benítez`  
+Ing. Miguel Antonio Benítez González (Universidad Tecnológica de Panamá - UTP) · 2026.
