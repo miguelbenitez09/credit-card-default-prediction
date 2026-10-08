@@ -120,15 +120,19 @@ Modelo predictivo que analiza:
 
 ---
 
-## 📊 Dataset
-
-### Información General
+## 📊 Dataset y Régimen de Acceso Abierto
 
 **Nombre**: Default of Credit Card Clients Dataset  
-**Fuente**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)  
-**Autor**: I-Cheng Yeh (2016)  
+**Fuente Oficial**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)  
+**Autor**: Prof. I-Cheng Yeh (Tamkang University)  
+**Licencia**: Creative Commons Attribution 4.0 International (CC BY 4.0) — Libre para uso educativo, académico y benchmarking competitivo  
 **DOI**: [10.24432/C55S3H](https://doi.org/10.24432/C55S3H)  
 **Período**: Abril 2005 - Septiembre 2005 (Taiwán)
+
+### Estrategia de Tratamiento de Datos y MLOps
+1. **Tratamiento del Desbalance de Clases:** En riesgo crediticio, predecir la clase minoritaria (default ~22.1%) es crítico debido a la asimetría de costos (un falso negativo cuesta mucho más que un falso positivo). Se implementó sobremuestreo sintético con **SMOTE** para entrenamiento de modelos balanceados y calibración de pesos con `scale_pos_weight` en modelos basados en árboles.
+2. **Ingeniería de Ratios Crediticios:** Construcción de features avanzadas de comportamiento financiero: ratio de utilización de línea de crédito ($\text{BILL\_AMT} / \text{LIMIT\_BAL}$), velocidad de amortización del saldo y pendiente de acumulación de deuda en los últimos 6 meses.
+3. **Política Zero Raw Bloat:** Estructura modular optimizada para despliegue en microservicio FastAPI y Streamlit con modelos pre-entrenados y pruebas unitarias reproducibles.
 
 ### Estadísticas del Dataset
 
