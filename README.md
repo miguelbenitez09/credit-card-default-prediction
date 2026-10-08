@@ -131,7 +131,7 @@ Modelo predictivo que analiza:
 
 ### Estrategia de Tratamiento de Datos y MLOps
 1. **Tratamiento del Desbalance de Clases:** En riesgo crediticio, predecir la clase minoritaria (default ~22.1%) es crítico debido a la asimetría de costos (un falso negativo cuesta mucho más que un falso positivo). Se implementó sobremuestreo sintético con **SMOTE** para entrenamiento de modelos balanceados y calibración de pesos con `scale_pos_weight` en modelos basados en árboles.
-2. **Ingeniería de Ratios Crediticios:** Construcción de features avanzadas de comportamiento financiero: ratio de utilización de línea de crédito ($\text{BILL\_AMT} / \text{LIMIT\_BAL}$), velocidad de amortización del saldo y pendiente de acumulación de deuda en los últimos 6 meses.
+2. **Ingeniería de Ratios Crediticios:** Construcción de features avanzadas de comportamiento financiero: ratio de utilización de línea de crédito (`BILL_AMT / LIMIT_BAL`), velocidad de amortización del saldo y pendiente de acumulación de deuda en los últimos 6 meses.
 3. **Política Zero Raw Bloat:** Estructura modular optimizada para despliegue en microservicio FastAPI y Streamlit con modelos pre-entrenados y pruebas unitarias reproducibles.
 
 ### Estadísticas del Dataset
