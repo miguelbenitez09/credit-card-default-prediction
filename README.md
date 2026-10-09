@@ -41,9 +41,16 @@
 
 ---
 
-## 🎯 Descripción del Proyecto
+## 🎯 Descripción del Proyecto y Enfoque Académico UTP
 
-Este proyecto implementa un sistema completo de evaluación de riesgo crediticio para predecir si un cliente de tarjeta de crédito incumplirá su pago el próximo mes (`default payment = 1`) o pagará a tiempo (`default payment = 0`).
+Este proyecto constituye un **pipeline fundacional de extremo a extremo (E2E MLOps Lifecycle)** desarrollado para consolidar y demostrar las competencias troncales adquiridas durante la carrera de **Ingeniería en Sistemas y Computación en la Universidad Tecnológica de Panamá (UTP)**. 
+
+El objetivo es modelar con rigor matemático el problema de clasificación asimétrica de riesgo crediticio, demostrando cada etapa del ciclo de vida del aprendizaje automático:
+1. **Comprensión del Negocio y Asimetría de Costos:** Evaluación de pérdidas financieras por falsos negativos vs falsos positivos bajo regulaciones crediticias (Basilea II/III).
+2. **Ingeniería de Ratios Financieros:** Transformación de montos facturados e historiales de atraso en indicadores de solvencia y apalancamiento relativo.
+3. **Tratamiento Formal de Desbalance:** Aplicación de sobremuestreo sintético con **SMOTE** y calibración de pesos de clase en gradientes potenciados.
+4. **Validación Cruzada Estratificada:** Selección rigurosa del modelo utilizando métricas de discriminación probabilística (**ROC-AUC** y **PR-AUC**).
+5. **Ingeniería de Software para Producción:** Microservicio REST con FastAPI, validación de tipos Pydantic, contenedorización Docker e interfaz interactiva en Streamlit.
 
 ### Objetivo Principal
 Desarrollar un modelo predictivo robusto para:
@@ -55,7 +62,7 @@ Desarrollar un modelo predictivo robusto para:
 ### Pipeline Completo
 ```
 Datos UCI → EDA → Limpieza → Feature Engineering → Balanceo (SMOTE) → 
-→ Modelado ML → Validación → API REST → Dashboard Web → Docker
+→ Modelado ML → Validación ROC-AUC → API REST → Dashboard Web → Docker
 ```
 
 ### Características del Sistema
